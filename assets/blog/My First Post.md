@@ -24,5 +24,5 @@ int main(){
 
 Image:
 
-![Test Image](./images/01.png)
+![Test Image](./assets/images/01.png)
 
