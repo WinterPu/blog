@@ -24,5 +24,5 @@ int main(){
 
 Image:
 
-![Test Image](./assets/images/01.png)
+![Test Image](https://github.com/WinterPu/blog/blob/gh-pages/assets/blog/images/01.png?raw=true)
 
