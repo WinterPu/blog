@@ -1,0 +1,18 @@
+.NavBar{
+  color:grey;
+  float:right;
+  height:70px;
+  .NavTag{
+    font-size: 20px;
+    width:100px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+nav a{
+  color:grey;
+}
+nav a.active{
+  background:white;
+}
