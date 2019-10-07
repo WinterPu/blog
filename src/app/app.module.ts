@@ -10,17 +10,22 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavComponent,
-    navRoutingComponents
+    navRoutingComponents,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgbModule,
     MarkdownModule.forRoot({ loader: HttpClient })
   ],
   providers: [],
