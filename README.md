@@ -4,7 +4,9 @@ WinterPu's Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
+## Blog Link
 
+[https://WinterPu.github.io/blog](https://WinterPu.github.io/blog)
 
 ## Dependency
 
@@ -14,12 +16,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 + ngx-markdown v7.1.5
 
-  
+
 
 Run npm install to install the required modules
 
 ```
-npm install 
+npm install
 ```
 
 
