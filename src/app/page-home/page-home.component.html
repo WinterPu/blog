@@ -1,12 +1,64 @@
 
-  page-home works!
+<div @SlideInOut class="container PostPreviewCard" (click)="onClick()">
+  <div class="card mb-3" style="max-width: 100hv;">
+    <div class="row no-gutters">
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">{{preview_name}}</div>
+          <div class="card-body">
 
+            <h5 class="card-title">{{preview_name}}</h5>
+            <p class="card-text">{{preview_context}}</p>
+            <p class="card-text"><small class="text-muted">{{preview_created_time}}</small></p>
+
+          </div>
+          <div class="card-footer">{{preview_created_time}}</div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3">
+          <img [src]="preview_image_path" class="card-img" alt="...">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div @SlideInOut class="container PostPreviewCard">
+  <div class="row no-gutters">
+
+    <div class="col-md-3">
+        <img [src]="preview_image_path" class="card-img" alt="...">
+    </div>
+
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-header">{{preview_name}}</div>
+        <div class="card-body">
+
+          <h5 class="card-title">{{preview_name}}</h5>
+          <p class="card-text">{{preview_context}}</p>
+          <p class="card-text"><small class="text-muted">{{preview_created_time}}</small></p>
+
+        </div>
+        <div class="card-footer">{{preview_created_time}}</div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!--
   <div class="card">
     <div class="card-header">头部</div>
     <div class="card-body">内容</div>
     <div class="card-footer">底部</div>
   </div>
-  
+
   <div class="card" style="width:400px">
   <img class="card-img-top" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjazrPnkorlAhWCY98KHdxlAcMQjRx6BAgBEAQ&url=https%3A%2F%2Fdl.pconline.com.cn%2Ffeatured%2F8213081.html&psig=AOvVaw3pW3K59OQWtw3XSujNWPYN&ust=1570537646514621" alt="Card image">
   <div class="card-body">
@@ -15,3 +67,32 @@
     <a href="#" class="btn btn-primary">See Profile</a>
   </div>
 </div>
+
+
+
+<div class="card mb-3">
+  <img [src]="preview_image_path" class="card-img-right" alt="...">
+  <div class="card-header">{{preview_name}}</div>
+
+  <div class="card-body">
+    <h5 class="card-title">{{preview_name}}</h5>
+    <p class="card-text">{{preview_context}}</p>
+    <p class="card-text"><small class="text-muted">{{preview_created_time}}</small></p>
+  </div>
+</div>
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="assets/blog/images/01.png" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div> -->

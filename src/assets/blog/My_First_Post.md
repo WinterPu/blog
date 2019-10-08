@@ -1,6 +1,6 @@
 # My First Post
 
-Do Post Test
+> Do Post Test
 
 
 
@@ -24,5 +24,4 @@ int main(){
 
 Image:
 
-![Test Image](./images/01.png)
-
+![Test Image](assets/blog/images/01.png)

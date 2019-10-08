@@ -4,6 +4,26 @@ WinterPu's Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
+
+
+## Dependency
+
++ Bootstrap 4.3.1
+
++ ng-bootstrap v 4.2.2
+
++ ngx-markdown v7.1.5
+
+  
+
+Run npm install to install the required modules
+
+```
+npm install 
+```
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
