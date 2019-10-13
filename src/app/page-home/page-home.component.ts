@@ -33,7 +33,7 @@ import {
 })
 export class PageHomeComponent implements OnInit {
 
-  public preview_image_path = "assets/blog/images/01.png";
+  public preview_image_path = "assets/profolio/01/GameCover.jpg";
   public preview_name = "My Card Title";
   public preview_context = "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.";
   public preview_created_time = "Last updated 3 mins ago";
