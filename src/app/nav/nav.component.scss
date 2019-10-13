@@ -1,28 +1,31 @@
-.NavBar{
-  color:grey;
-  float:right;
-  height:70px;
-  .NavTag{
-    font-size: 20px;
-    width:100px;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
+// .NavBar{
+//   color:grey;
+//   float:right;
+//   height:70px;
+//   .NavTag{
+//     font-size: 20px;
+//     width:100px;
+//     margin-left: 10px;
+//     margin-right: 10px;
+//   }
+// }
 
 nav a{
   color:grey;
 }
 nav a.active{
-  background:white;
+  color:white;
 }
 
 //
 .nav-item{
-  font-size: 20px;
-  width:120px;
+  font-size: 22px;
+  max-width: 200px;
+  width:-webkit-fit-content;
+  width:-moz-fit-content;
 }
 
 .NavSeparator{
-  padding-top: 10px;
+  padding-top: 12px;
+  width:20px;
 }

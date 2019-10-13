@@ -1,9 +1,31 @@
-.PostPreviewCard{
-  background-color: #d2d2d2;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+// There are 2 ways to realize hover brightness
+// 1. Use Brightness
+// 2. Add Mask <div class="PostPreviewCardMask"></div>
 
-.PostPreviewCard:hover{
-  background-color:white;
+
+
+// Method1 --  Use Brightness
+.PreviewCard{
+  filter: brightness(0.9);
 }
+.PreviewCard:hover{
+  filter: brightness(1)
+}
+// Method2 --- Use Mask
+// .PostPreviewCardMask{
+//   //background-color:rgb(210,210,210);
+//   background-color:grey;
+//   width:100%;
+//   height:100%;
+//   opacity: 0.3;
+//   z-index: 1;
+//   position:absolute;
+// }
+// .PostPreviewCardMask:hover{
+//   background-color:white;
+//   opacity: 0;
+// }
+//
+// .LowZIndex{
+//   z-index: 0;
+// }

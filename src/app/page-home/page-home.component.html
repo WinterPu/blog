@@ -1,7 +1,9 @@
 
-<div @SlideInOut class="container PostPreviewCard" (click)="onClick()">
+<div @SlideInOut class="container PreviewCard" (click)="onClick()">
   <div class="card mb-3" style="max-width: 100hv;">
-    <div class="row no-gutters">
+    <!-- <div class="PostPreviewCardMask"></div> -->
+
+    <div class="row no-gutters LowZIndex">
       <div class="col-md-9">
         <div class="card">
           <div class="card-header">{{preview_name}}</div>
@@ -26,29 +28,33 @@
 
 
 
-<div @SlideInOut class="container PostPreviewCard">
-  <div class="row no-gutters">
+<div @SlideInOut class="container PreviewCard">
+  <div class="card mb-3" style="max-width: 100hv;">
+    <!-- <div class="PostPreviewCardMask"></div> -->
 
-    <div class="col-md-3">
-        <img [src]="preview_image_path" class="card-img" alt="...">
-    </div>
 
-    <div class="col-md-9">
-      <div class="card">
-        <div class="card-header">{{preview_name}}</div>
-        <div class="card-body">
+    <div class="row no-gutters LowZIndex">
 
-          <h5 class="card-title">{{preview_name}}</h5>
-          <p class="card-text">{{preview_context}}</p>
-          <p class="card-text"><small class="text-muted">{{preview_created_time}}</small></p>
-
-        </div>
-        <div class="card-footer">{{preview_created_time}}</div>
+      <div class="col-md-3">
+          <img [src]="preview_image_path" class="card-img" alt="...">
       </div>
+
+      <div class="col-md-9">
+
+        <div class="card">
+          <div class="card-header">{{preview_name}}</div>
+          <div class="card-body">
+
+            <h5 class="card-title">{{preview_name}}</h5>
+            <p class="card-text">{{preview_context}}</p>
+            <p class="card-text"><small class="text-muted">{{preview_created_time}}</small></p>
+
+          </div>
+          <div class="card-footer">{{preview_created_time}}</div>
+        </div>
+      </div>
+
     </div>
-
-
-
   </div>
 </div>
 
