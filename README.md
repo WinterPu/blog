@@ -24,6 +24,12 @@ Run npm install to install the required modules
 npm install
 ```
 
+## Deploy Instructions
+
+```
+ng build --prod --base-href "https://WinterPu.github.io/blog/"
+ngh --dir=dist/blog
+```
 
 
 ## Development server
