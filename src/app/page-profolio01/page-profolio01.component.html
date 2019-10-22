@@ -1,13 +1,10 @@
+<!-- Profolio Page -->
 <div class="container text-white">
 
   <div class="jumbotron text-white">
     <h1>The Last Guardian</h1>
     <p>It's a Virtual Reality Game</p>
   </div>
-
-<div class="Test">
-  dddddddd
-</div>
 
 
 <div class="ProfolioTitleHeader row h-100">
@@ -41,7 +38,8 @@
     <b>Gallery</b>
   </span>
 </div>
-<ngb-carousel #carousel interval="1000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+<!-- [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" -->
+<ngb-carousel #carousel interval="1000">
   <ng-template ngbSlide *ngFor="let img of images; index as i">
     <div class="carousel-caption">
       <h3> Game Shots {{i+1}} </h3>
@@ -71,7 +69,12 @@
     <b>Game Video</b>
   </span>
 </div>
-<iframe width="600"height="500" src="https://www.youtube.com/embed/cg9xyjw1k-0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="container">
+  <iframe class="align-middle" width="600"height="500" src="https://www.youtube.com/embed/cg9xyjw1k-0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
 
 </div>
 

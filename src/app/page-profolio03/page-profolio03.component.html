@@ -1,3 +1,43 @@
-<p>
-  page-profolio03 works!
-</p>
+<!-- Profolio Page -->
+<div class="container text-white">
+
+  <div class="jumbotron text-dark">
+    <h1>Procedural Billiard Game Level Generation</h1>
+    <p>Automatically generate some billiard game level</p>
+  </div>
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Game Bacis</b>
+  </span>
+</div>
+<div class="">
+  <p>Control</p>
+</div>
+
+
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Gallery</b>
+  </span>
+</div>
+<!-- [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" -->
+<ngb-carousel #carousel interval="1000">
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+    <div class="carousel-caption">
+      <h3> Game Shots {{i+1}} </h3>
+    </div>
+    <a href="https://www.google.fr/?q=Number+{{i+1}}"  target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="My image {{i + 1}} description">
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+
+
+
+</div>

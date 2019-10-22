@@ -1,3 +1,79 @@
-<p>
-  page-profolio02 works!
-</p>
+<!-- Profolio Page -->
+<div class="container text-white">
+
+  <div class="jumbotron text-dark">
+    <h1>Kitchen Crisis</h1>
+    <p>It's a tower-defense game</p>
+  </div>
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Game Bacis</b>
+  </span>
+</div>
+<div class="">
+  <p>It's a tower-defense game made by Unity</p>
+</div>
+
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Game Features</b>
+  </span>
+</div>
+<div class="">
+  <p> In this game, you need to control the temperature of each pot.</p>
+  <br>
+  <br>
+</div>
+
+
+
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Gallery</b>
+  </span>
+</div>
+<!-- [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" -->
+<ngb-carousel #carousel interval="1000">
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+    <div class="carousel-caption">
+      <h3> Game Shots {{i+1}} </h3>
+    </div>
+    <a href="https://www.google.fr/?q=Number+{{i+1}}"  target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="My image {{i + 1}} description">
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>
+
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Controls</b>
+  </span>
+</div>
+
+<div>
+</div>
+
+
+<div class="ProfolioTitleHeader row h-100">
+  <span class="ProfolioTitle justify-content-center align-self-center text-dark">
+    <b>Game Video</b>
+  </span>
+</div>
+<div class="container">
+  <iframe class="align-middle" width="600"height="500" src="https://www.youtube.com/embed/fAhICANDQjY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+
+</div>

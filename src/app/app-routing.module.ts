@@ -4,6 +4,9 @@ import { PageHomeComponent } from './page-home/page-home.component';
 import { PageAboutComponent } from './page-about/page-about.component';
 import { Page01Component } from './page01/page01.component';
 import { Page02Component } from './page02/page02.component';
+import { PageProfolioDisplayComponent } from './page-profolio-display/page-profolio-display.component';
+import { PageArticleDisplayComponent } from './page-article-display/page-article-display.component';
+
 
 const routes: Routes = [
   {path:'',component:PageHomeComponent},
@@ -11,7 +14,9 @@ const routes: Routes = [
   {path:'Nav_Home',component:PageHomeComponent},
   {path:'Nav_Profolio',component:Page01Component},
   {path:'Nav_Article',component:Page02Component},
-  {path:'Nav_About',component:PageAboutComponent}
+  {path:'Nav_About',component:PageAboutComponent},
+  {path:'profolio/:id',component:PageProfolioDisplayComponent},
+  {path:'article/:id',component:PageArticleDisplayComponent}
 ];
 
 @NgModule({
@@ -19,4 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const navRoutingComponents = [PageHomeComponent,Page01Component,Page02Component,PageAboutComponent];
+export const navRoutingComponents = [PageHomeComponent,Page01Component,Page02Component,PageAboutComponent,PageProfolioDisplayComponent,PageArticleDisplayComponent];

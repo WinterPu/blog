@@ -20,6 +20,8 @@ import { PageProfolio02Component } from './page-profolio02/page-profolio02.compo
 import { PageProfolio03Component } from './page-profolio03/page-profolio03.component';
 import { PageProfolio04Component } from './page-profolio04/page-profolio04.component';
 import { PageProfolio05Component } from './page-profolio05/page-profolio05.component';
+import { PageArticleDisplayComponent } from './page-article-display/page-article-display.component';
+import { ArticleCardDirective } from './_directives/article-card.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { PageProfolio05Component } from './page-profolio05/page-profolio05.compo
     PageProfolio02Component,
     PageProfolio03Component,
     PageProfolio04Component,
-    PageProfolio05Component
+    PageProfolio05Component,
+    PageArticleDisplayComponent,
+    ArticleCardDirective
   ],
   imports: [
     BrowserModule,
