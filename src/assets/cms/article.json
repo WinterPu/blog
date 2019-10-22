@@ -3,21 +3,21 @@
       "title":"Article01",
       "type":"original",
       "file_name":"My_First_Post.md",
-      "tag":["aaa","bbb","ccc"],
+      "tag":["tag01","tag02","tag03"],
       "preview_description":"This is my first sample article test"
   },
   {
       "title":"Article02",
       "type":"original1",
       "file_name":"My_Second_Post.md",
-      "tag":["aaa","ccc"],
+      "tag":["tag01","tag03"],
       "preview_description":"This is my second sample article test"
   },
   {
       "title":"Article03",
       "type":"original",
       "file_name":"My_Third_Post.md",
-      "tag":["bbb","ccc"],
+      "tag":["tag01","tag02"],
       "preview_description":"This is my third sample article test"
   }
 ]
