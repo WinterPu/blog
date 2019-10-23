@@ -15,7 +15,7 @@ export class CMSService {
   constructor(private httpClient: HttpClient) { }
 
 
-
+  // Get Data From Json File
   // method 1
   getJSONObjectFromFile(file:any){
     return JSON.parse(JSON.stringify(file));
@@ -26,6 +26,8 @@ export class CMSService {
       return this.httpClient.get(url);
   }
 
+
+  // Article
   getArticleArray(){
     let articles:Article[] = [];
     let json_data= this.getJSONObjectFromFile(article_json_file);
