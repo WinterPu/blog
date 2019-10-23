@@ -22,6 +22,10 @@ import { PageProfolio04Component } from './page-profolio04/page-profolio04.compo
 import { PageProfolio05Component } from './page-profolio05/page-profolio05.component';
 import { PageArticleDisplayComponent } from './page-article-display/page-article-display.component';
 import { ArticleCardDirective } from './_directives/article-card.directive';
+import { PageArchiveComponent } from './page-archive/page-archive.component';
+import { PageSearchResultComponent } from './page-search-result/page-search-result.component';
+
+import {allServices} from './_services/services';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,9 @@ import { ArticleCardDirective } from './_directives/article-card.directive';
     PageProfolio04Component,
     PageProfolio05Component,
     PageArticleDisplayComponent,
-    ArticleCardDirective
+    ArticleCardDirective,
+    PageArchiveComponent,
+    PageSearchResultComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,7 @@ import { ArticleCardDirective } from './_directives/article-card.directive';
     MarkdownModule.forRoot({ loader: HttpClient }),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [allServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

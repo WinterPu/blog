@@ -46,7 +46,7 @@ export class Page01Component implements OnInit {
     this.profolios = this.cms.getProfolioArray();
     console.log("Total profolio number: "+ this.profolios.length);
     this.profolios.forEach((profolio:Profolio)=>{
-        this.profolio_image_path_list.push(this.cms.getProfolioCoverImagePathByIndex(profolio.index,this.profolios));
+        this.profolio_image_path_list.push(this.cms.getProfolioCoverImagePathByIndex(profolio.index));
     });
   }
 

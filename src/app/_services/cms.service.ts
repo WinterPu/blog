@@ -12,9 +12,17 @@ export class CMSService {
   private path_article:string = "assets/blog/";
   private path_profolio:string = "assets/profolio/";
 
+  static articles:Article[];
+  static tags_article_list:Map<string,Article[]>;
+  static profolios:Profolio[];
+
   constructor(private httpClient: HttpClient) { }
 
-
+  initCMS(){
+    CMSService.articles = this.fetchArticleArray();
+    CMSService.tags_article_list = this.fetchArticleTagMap();
+    CMSService.profolios = this.fetchProfolioArray();
+  }
   // Get Data From Json File
   // method 1
   getJSONObjectFromFile(file:any){
@@ -28,7 +36,7 @@ export class CMSService {
 
 
   // Article
-  getArticleArray(){
+  fetchArticleArray(){
     let articles:Article[] = [];
     let json_data= this.getJSONObjectFromFile(article_json_file);
 
@@ -45,9 +53,9 @@ export class CMSService {
 
     return articles;
   }
+  getArticleArray(){return CMSService.articles;}
 
-
-  getArticleTagMap(){
+  fetchArticleTagMap(){
     let tags = new Map<string,Article[]>();
     let articles:Article[] = this.getArticleArray();
     // for each article, get its tag list
@@ -68,20 +76,30 @@ export class CMSService {
     return tags;
   }
 
-  getArticlePathByIndex(id:number,articles:Article[]){
-    if(id >= articles.length){
+  getArticleTagMap(){return CMSService.tags_article_list;}
+
+  getArticlePathByIndex(id:number){
+    if(id >= CMSService.articles.length){
       console.log("Wrong ID!");
       return null;
     }
     else
-      return this.path_article+articles[id].file_name;
+      return this.path_article+CMSService.articles[id].file_name;
   }
 
+  getArticleTagByIndex(id:number){
+    if(id >= CMSService.articles.length){
+      console.log("Wrong ID!");
+      return null;
+    }
+    else
+      return CMSService.articles[id].tag;
+  }
 
 
   // Profolio
 
-  getProfolioArray(){
+  fetchProfolioArray(){
     let profolios:Profolio[] = [];
     let json_data= this.getJSONObjectFromFile(profolio_json_file);
 
@@ -96,15 +114,16 @@ export class CMSService {
     return profolios;
   }
 
+  getProfolioArray(){return CMSService.profolios;}
 
-  getProfolioCoverImagePathByIndex(id:number,profolios:Profolio[]){
-    if(id >= profolios.length){
+  getProfolioCoverImagePathByIndex(id:number){
+    if(id >= CMSService.profolios.length){
       console.log("Wrong ID!");
       return null;
     }
     else{
-      let index = profolios[id].index+1;
-      let img_name = profolios[id].preview_image_file_name;
+      let index = CMSService.profolios[id].index+1;
+      let img_name = CMSService.profolios[id].preview_image_file_name;
       return this.path_profolio +(index<10?"0"+index:index)+"/"+img_name;
     }
   }

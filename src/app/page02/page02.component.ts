@@ -79,5 +79,4 @@ export class Page02Component implements OnInit {
     });
   }
 
-
 }

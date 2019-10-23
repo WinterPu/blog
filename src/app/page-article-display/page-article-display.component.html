@@ -15,5 +15,13 @@
   <!-- <markdown ngPreserveWhitespaces>
       # Markdown
   </markdown> -->
+  <div class="TagArea">
+    <h3>Tags:</h3>
+      <span class="Tag" *ngFor="let tag of tags"><button type="button" class="btn btn-primary" (click)="onClickSearchByTag(tag)">
+    {{tag}}
+    </button></span>
+  </div>
+
+
   <markdown [src] = "path"></markdown>
 </div>

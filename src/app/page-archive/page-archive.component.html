@@ -1,0 +1,10 @@
+<div class="text-white">
+  <h1>Archive</h1>
+
+  <div class="TagArea">
+    <h3>Tags:</h3>
+      <span class="Tag" *ngFor="let tagEntry of tag_map.entries()"><button type="button" class="btn btn-primary" (click)="onClickSearchByTag(tagEntry[0])">
+    {{tagEntry[0]}}
+    </button></span>
+  </div>
+</div>
