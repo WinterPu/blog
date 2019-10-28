@@ -1,6 +1,6 @@
-<div *ngFor="let profolio of profolios">
+<div *ngFor="let profolio of profolios; let i=index">
 
-  <div @SlideInOut class="container PreviewCard" (click)="onClick(profolio.index+1)">
+  <div @SlideInOut class="container PreviewCard" (click)="onClick(profolio.index)">
     <div class="card mb-3" style="max-width: 100hv;">
       <!-- <div class="PostPreviewCardMask"></div> -->
 
@@ -12,16 +12,16 @@
 
               <h5 class="card-title">{{profolio.title}}</h5>
               <p class="card-text">{{profolio.preview_description}}</p>
-              <p class="card-text"><small class="text-muted">{{preview_created_time}}</small></p>
+              <p class="card-text"><small class="text-muted">{{profolio.created_time}}</small></p>
 
             </div>
-            <div class="card-footer">{{preview_created_time}}</div>
+            <div class="card-footer">{{profolio.updated_time}}</div>
           </div>
         </div>
 
 
         <div class="col-md-3 align-self-center">
-            <img [src]="profolio_image_path_list[profolio.index]" class="card-img" alt="...">
+            <img [src]="profolio_image_path_list[i]" class="card-img" alt="...">
         </div>
       </div>
     </div>

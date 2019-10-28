@@ -108,7 +108,10 @@ export class CMSService {
       profolio.title = json_data[i]["title"];
       profolio.preview_description = json_data[i]["preview_description"];
       profolio.preview_image_file_name = json_data[i]["preview_image_file_name"];
-      profolio.index = i;
+      profolio.index = json_data[i]["index"];
+      profolio.order = i;
+      profolio.created_time = json_data[i]["created_time"];
+      profolio.updated_time = json_data[i]["updated_time"] || profolio.created_time ;
       profolios.push(profolio);
     }
     return profolios;
@@ -117,12 +120,12 @@ export class CMSService {
   getProfolioArray(){return CMSService.profolios;}
 
   getProfolioCoverImagePathByIndex(id:number){
-    if(id >= CMSService.profolios.length){
+    if(id > CMSService.profolios.length){
       console.log("Wrong ID!");
       return null;
     }
     else{
-      let index = CMSService.profolios[id].index+1;
+      let index = CMSService.profolios[id].index;
       let img_name = CMSService.profolios[id].preview_image_file_name;
       return this.path_profolio +(index<10?"0"+index:index)+"/"+img_name;
     }
