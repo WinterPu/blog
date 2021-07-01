@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PageProfolioDisplayComponent } from './page-profolio-display.component';
 
@@ -6,7 +6,7 @@ describe('PageProfolioDisplayComponent', () => {
   let component: PageProfolioDisplayComponent;
   let fixture: ComponentFixture<PageProfolioDisplayComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PageProfolioDisplayComponent ]
     })
